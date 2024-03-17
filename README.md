@@ -3,6 +3,8 @@ The codes for paper: A Dataset and Experimental Study towards Visual Terrain Cla
 
 The datasets will be later published at [www.poss.pku.edu.cn](http://www.poss.pku.edu.cn).
 
+Sample images of 10 terrain classes of TCPOSS:
+![img|center](./img_exm/fig3.png)
 ## Installation
 
 ### Requirements
