@@ -12,8 +12,11 @@ Sample images of 10 terrain classes of TCPOSS:
 the version in () is the version recommended, not the only version.
 - Python (3.9)
 - Pytorch ('1.10.1+cu111')
-
-
+- pandas (2.2.1)
+- cv2 (opencv-python 4.5.4.60)
+- sklearn (scikit-learn 1.3.2)
+- matplotlib (3.8.3)
+- openpyxl (3.1.2)
 ## Data Preparation
 
 ### TCPOSS
