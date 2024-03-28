@@ -55,9 +55,11 @@ the version in () is the version recommended, not the only version.
     ├── dataset.py
     ├── record/
     ├── model/
+    ├── config/
+    └── ...
 ```
 
-The detailed description of the command line parameters please refer to readme_code.txt.
+The detailed description of the command line parameters please refer to [readme_code.txt](./readme_code.txt).
 
 For trail, using mobilnet backbone and four levels of dataset, just run:
 
