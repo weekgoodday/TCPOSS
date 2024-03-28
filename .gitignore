@@ -1,2 +1,4 @@
 ./*bedug*
 TCPOSS_data
+./model/*
+./record/*

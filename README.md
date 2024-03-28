@@ -17,6 +17,8 @@ the version in () is the version recommended, not the only version.
 - sklearn (scikit-learn 1.3.2)
 - matplotlib (3.8.3)
 - openpyxl (3.1.2)
+- tqdm (4.66.2)
+
 ## Data Preparation
 
 ### TCPOSS
@@ -44,6 +46,12 @@ the version in () is the version recommended, not the only version.
 ```
 
 ## Training
+The detailed description of the command line parameters please refer to readme_code.txt.
+For trail using mobilnet backbone and four levels of dataset, just run:
+
+```
+sh start.sh
+```
 
 ## TODO List
 ### Release Data
