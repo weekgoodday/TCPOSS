@@ -23,7 +23,7 @@ the version in () is the version recommended, not the only version.
 
 ### TCPOSS
 ```
-└── TCPOSS_Data
+└── TCPOSS_data/
     ├── 103101/ 
     |   ├── 1698727798/
     |   |   ├── imgs/
@@ -46,6 +46,17 @@ the version in () is the version recommended, not the only version.
 ```
 
 ## Training
+
+### Folder Structure
+```
+└── TCPOSS/
+    ├── TCPOSS_data/
+    ├── train.py
+    ├── dataset.py
+    ├── record/
+    ├── model/
+```
+
 The detailed description of the command line parameters please refer to readme_code.txt.
 
 For trail, using mobilnet backbone and four levels of dataset, just run:
@@ -61,7 +72,7 @@ sh start_train.sh
 - [ ] upload instructions for usage
 
 ### Release Codes for Terrain Classification Model
-- [ ] Release codes for training (various configurations and 3 backbone)
+- [x] Release codes for training (various configurations and 3 backbone)
 - [ ] Release codes for evaluating
 - [ ] Release codes for plotting Fig.7 T-SNE feature space
 
