@@ -18,15 +18,16 @@ the version in () is the version recommended, not the only version.
 
 ### TCPOSS
 ```
-└── TCPOSS
+└── TCPOSS_Data
     ├── 103101/ 
-    |   ├── 1698727797/
-    |   |   ├── imgs/
-    |   |   |   ├── 1698727797038674736.jpg
-    |   |   |   ├── 1698727797xxxxxxxxx.jpg
-    |   |   |   └── ...
     |   ├── 1698727798/
-    |   └── ...
+    |   |   ├── imgs/
+    |   |   |   ├── 1698727798037949165.jpg
+    |   |   |   ├── 1698727798xxxxxxxxx.jpg
+    |   |   |   └── ...
+    |   ├── 1698727799/
+    |   ├── ...
+    |   └── valid.txt
     ├── 103102/
     └── ...
     ├── label.csv
