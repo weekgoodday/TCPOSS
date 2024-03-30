@@ -42,7 +42,7 @@ the version in () is the version recommended, not the only version.
     |   ├── train_test_split_medium.xlsx
     |   ├── train_test_split_hard.xlsx  
     |   └── makeh5py.py
-    └── visialize_data.ipynb
+    └── visualize_data.ipynb
 ```
 
 ## Training
