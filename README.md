@@ -18,10 +18,12 @@ the version in () is the version recommended, not the only version.
 - matplotlib (3.8.3)
 - openpyxl (3.1.2)
 - tqdm (4.66.2)
+- ipykernel
 
 ## Data Preparation
 
 ### TCPOSS
+The folder structure of TCPOSS dataset is as follows:
 ```
 └── TCPOSS_data/
     ├── 103101/ 
@@ -45,6 +47,20 @@ the version in () is the version recommended, not the only version.
     └── visialize_data.ipynb
 ```
 
+### H5py File Generation
+To generate entry/easy/medium/hard levels of dataset described in the paper, run:
+```
+cd ./TCPOSS_data/train_test_split
+python makeh5py.py --mode entry
+python makeh5py.py --mode easy
+python makeh5py.py --mode medium
+python makeh5py.py --mode hard
+```
+8 h5py files will be generated in directory ./TCPOSS_data/h5py . These files are the basis for subsequent data visualization and processing.
+
+### Data Visiualization
+Some visualization codes and useful toolkit can be see in [./TCPOSS_data/visualize_data.ipynb](./bak/visualize_data.ipynb) .
+
 ## Training
 
 ### Folder Structure
@@ -59,19 +75,20 @@ the version in () is the version recommended, not the only version.
     └── ...
 ```
 
-The detailed description of the command line parameters please refer to [readme_code.txt](./readme_code.txt).
-
+### Train on Datasets of Varying Difficulty 
 For trial, using mobilnet backbone and four levels of dataset, just run:
 
 ```
 sh start_train.sh
 ```
 
+The detailed usage and description of the command line parameters please refer to [readme_code.txt](./readme_code.txt).
+
 ## TODO List
 ### Release Data
 - [ ] Make a brief video of TCPOSS
-- [ ] Upload data 
-- [ ] upload instructions for usage
+- [x] Upload data 
+- [x] upload instructions for usage
 
 ### Release Codes for Terrain Classification Model
 - [x] Release codes for training (various configurations and 3 backbone)
@@ -85,4 +102,4 @@ sh start_train.sh
 - [ ] Release codes for Fig.10 Calculating KLConf
 
 ### Others
-- [ ] Release requirements
+- [x] Release requirements
