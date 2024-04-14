@@ -176,7 +176,7 @@ if repeat_time >= 1:
         test_losses = []
         test_accs = []
         loss_fn = nn.CrossEntropyLoss()
-        optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=learning_rate)  # filter只是减小参数量
+        optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=learning_rate)
         # learning rate decay
         scheduler = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=lr_decay, last_epoch=-1)
         for epoch in range(epochs):
