@@ -1,5 +1,5 @@
 # A Dataset and Experimental Study towards Visual Terrain Classification with OOD Challenges in Real World
-The codes of our work **A Dataset and Experimental Study towards Visual Terrain Classification with OOD Challenges in Real World**
+The codes of our work **A Dataset and Experimental Study towards Visual Terrain Classification with OOD Challenges in Real World**.
 
 The dataset TCPOSS will be later published at [www.poss.pku.edu.cn](http://www.poss.pku.edu.cn).
 
