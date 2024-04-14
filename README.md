@@ -44,7 +44,7 @@ The folder structure of TCPOSS dataset is as follows:
     |   ├── train_test_split_medium.xlsx
     |   ├── train_test_split_hard.xlsx  
     |   └── makeh5py.py
-    └── visialize_data.ipynb
+    └── visualize_data.ipynb
 ```
 
 ### H5py File Generation
