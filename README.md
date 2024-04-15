@@ -1,7 +1,7 @@
 # A Dataset and Experimental Study towards Visual Terrain Classification with OOD Challenges in Real World
 The codes of our work **A Dataset and Experimental Study towards Visual Terrain Classification with OOD Challenges in Real World**.
 
-The dataset TCPOSS will be later published at [www.poss.pku.edu.cn](http://www.poss.pku.edu.cn).
+The dataset TCPOSS is published at [www.poss.pku.edu.cn/tcposs.html](http://www.poss.pku.edu.cn/tcposs.html).
 
 Sample images of 10 terrain classes of TCPOSS:
 ![img|center](./img_exm/fig3.png)
