@@ -88,7 +88,7 @@ The detailed usage and description of the command line parameters please refer t
 ### Release Data
 - [x] Make a brief video of TCPOSS
 - [x] Upload data 
-- [x] upload instructions for usage
+- [x] Upload instructions for usage
 
 ### Release Codes for Terrain Classification Model
 - [x] Release codes for training (various configurations and 3 backbone)
