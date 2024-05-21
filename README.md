@@ -84,6 +84,14 @@ sh start_train.sh
 
 The detailed usage and description of the command line parameters please refer to [readme_code.txt](./readme_code.txt).
 
+## Evaluating
+
+### Calculate Confusion Matrix, recall, precision etc
+Revise the data and model path in evaluate.py, then run:
+```
+python evaluate.py
+```
+
 ## TODO List
 ### Release Data
 - [x] Make a brief video of TCPOSS
@@ -92,7 +100,7 @@ The detailed usage and description of the command line parameters please refer t
 
 ### Release Codes for Terrain Classification Model
 - [x] Release codes for training (various configurations and 3 backbone)
-- [ ] Release codes for evaluating
+- [x] Release codes for evaluating
 - [ ] Release codes for plotting Fig.7 T-SNE feature space
 
 ### Release Codes for Confidence Estimation Methods
