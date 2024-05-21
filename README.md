@@ -86,10 +86,16 @@ The detailed usage and description of the command line parameters please refer t
 
 ## Evaluating
 
-### Calculate Confusion Matrix, recall, precision etc
+### Calculate Confusion Matrix, Recall, Precision
 Revise the data and model path in evaluate.py, then run:
 ```
 python evaluate.py
+```
+
+### Plot T-SNE Images
+Revise the data and model path in plot_tsne.py, then run:
+```
+python plot_tsne.py
 ```
 
 ## TODO List
@@ -101,7 +107,7 @@ python evaluate.py
 ### Release Codes for Terrain Classification Model
 - [x] Release codes for training (various configurations and 3 backbone)
 - [x] Release codes for evaluating
-- [ ] Release codes for plotting Fig.7 T-SNE feature space
+- [x] Release codes for plotting Fig.7 T-SNE feature space
 
 ### Release Codes for Confidence Estimation Methods
 - [ ] Release codes for confidence methods (MCDropout, Ensemble, Mahalanobis Distance, Evidential Deep Learning)
