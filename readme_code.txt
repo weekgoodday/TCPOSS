@@ -30,9 +30,19 @@ plot_tsne.py : Draw T-SNE graph, observe the feature distribution of training se
 Because of the optimization characteristics of T-SNE, the two sets are combined for TSNE optimization inference, and then they are observed separately.
 There are no command line parameters, pay attention to modify the model and training set and test set path before running.
 
+5 Confidence Methods:
+
+SoftmaxConf.py uses logits after Softmax layer.
+Plot remained accuracy (the accuracy of the data with confidence larger than threshold) with the confidence threshold increases. Print the area under this remained acc curve.
+There are no command line parameters, pay attention to modify the model and test set path before running.
+
 MCdropout.py MCdropout calculates total uncertainty, aleatoric uncertainty, epistemic uncertainty in evaluation. Use negative total uncertainty as confidence.
 Plot remained accuracy (the accuracy of the data with confidence larger than threshold) with the confidence threshold increases. Print the area under this remained acc curve.
 There are no command line parameters, pay attention to modify the model and test set path before running.
 
-Ensemble.py Like MCDropout, calculate negative total uncertainty as confidence. Need 5 models trained before.
+Ensemble.py Like MCDropout, calculates negative total uncertainty as confidence. Need 5 models trained before.
+There are no command line parameters, pay attention to modify the model and test set path before running.
+
+Mahalanobis.py calculates negative Mahalanobis distance as confidence. We use a specific covariance matrix for a specific class, to ensure the reversibility of covariance matrix, we use PCA.
+Some experimental results show our implementation performs better than original, although Mahalanobis distance itself performs not so well on our task.
 There are no command line parameters, pay attention to modify the model and test set path before running.

@@ -100,6 +100,13 @@ python plot_tsne.py
 ```
 more description of plot_tsne.py, please refer to [readme_code.txt](./readme_code.txt).
 
+### Confidence Method 0: Softmax Confidence
+Revise the data and model path in SoftmaxConf.py, then run:
+```
+python SoftmaxConf.py
+```
+Plot the remained accuracy vs confidence threshold curve, print the area under the curve. (Remain accuracy means the accuracy of the data with confidence larger than threshold)
+
 ### Confidence Method 1: MCDropout
 Revise the data and model path in MCdropout.py, then run:
 ```
@@ -114,6 +121,15 @@ Revise the data and model path in MCdropout.py, then run:
 python Ensemble.py
 ```
 
+### Confidence Method 3: Mahalanobis Distance
+Revise the data and model path in Mahalanobis.py, then run:
+```
+python Mahalanobis.py
+```
+
+### Confidence Method 4: Evidential Deep Learning
+Need retrain, to be finished...
+
 ## TODO List
 ### Release Data
 - [x] Make a brief video of TCPOSS
@@ -126,7 +142,7 @@ python Ensemble.py
 - [x] Release codes for plotting Fig.7 T-SNE feature space
 
 ### Release Codes for Confidence Estimation Methods
-- [ ] Release codes for confidence methods (MCDropout, Ensemble, Mahalanobis Distance, Evidential Deep Learning)
+- [ ] Release codes for confidence methods (Softmax Confidence, MCDropout, Ensemble, Mahalanobis Distance, Evidential Deep Learning)
 - [ ] Release codes for plotting Fig.8 PR Curve
 - [ ] Release codes for plotting Fig.9 Confidence distributions
 - [ ] Release codes for Fig.10 Calculating KLConf
