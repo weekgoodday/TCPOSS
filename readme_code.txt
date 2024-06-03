@@ -30,5 +30,7 @@ plot_tsne.py : Draw T-SNE graph, observe the feature distribution of training se
 Because of the optimization characteristics of T-SNE, the two sets are combined for TSNE optimization inference, and then they are observed separately.
 There are no command line parameters, pay attention to modify the model and training set and test set path before running.
 
-MCdropout.py MCdropout gets au and eu
+MCdropout.py MCdropout calculates total uncertainty, aleatoric uncertainty, epistemic uncertainty in evaluation. Use negative total uncertainty as confidence.
+Plot remained accuracy (the accuracy of the data with confidence larger than threshold) with the confidence threshold increases. Print the area under this remained acc curve.
+There are no command line parameters, pay attention to modify the model and test set path before running.
 

@@ -98,6 +98,16 @@ Revise the data and model path in plot_tsne.py, then run:
 ```
 python plot_tsne.py
 ```
+more description of plot_tsne.py, please refer to [readme_code.txt](./readme_code.txt).
+
+### Confidence Method 1: MCDropout
+Revise the data and model path in MCdropout.py, then run:
+```
+python MCDropout.py
+```
+Plot the remained accuracy vs confidence threshold curve, print the area under the curve. (Remain accuracy means the accuracy of the data with confidence larger than threshold)
+
+more description please refer to [readme_code.txt](./readme_code.txt).
 
 ## TODO List
 ### Release Data
