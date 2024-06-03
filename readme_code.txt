@@ -34,3 +34,5 @@ MCdropout.py MCdropout calculates total uncertainty, aleatoric uncertainty, epis
 Plot remained accuracy (the accuracy of the data with confidence larger than threshold) with the confidence threshold increases. Print the area under this remained acc curve.
 There are no command line parameters, pay attention to modify the model and test set path before running.
 
+Ensemble.py Like MCDropout, calculate negative total uncertainty as confidence. Need 5 models trained before.
+There are no command line parameters, pay attention to modify the model and test set path before running.

@@ -106,8 +106,13 @@ Revise the data and model path in MCdropout.py, then run:
 python MCDropout.py
 ```
 Plot the remained accuracy vs confidence threshold curve, print the area under the curve. (Remain accuracy means the accuracy of the data with confidence larger than threshold)
+more description of MCDropout.py, please refer to [readme_code.txt](./readme_code.txt).
 
-more description please refer to [readme_code.txt](./readme_code.txt).
+### Confidence Method 2: Ensemble
+Revise the data and model path in MCdropout.py, then run:
+```
+python Ensemble.py
+```
 
 ## TODO List
 ### Release Data
