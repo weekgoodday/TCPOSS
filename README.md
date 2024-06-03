@@ -19,7 +19,8 @@ the version in () is the version recommended, not the only version.
 - openpyxl (3.1.2)
 - tqdm (4.66.2)
 - ipykernel
-
+- h5py
+ 
 ## Data Preparation
 
 ### TCPOSS
