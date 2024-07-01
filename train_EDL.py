@@ -28,7 +28,7 @@ parser.add_argument('--lr_decay', required=False, type=float, default=0.9)
 parser.add_argument('--n_classes', required=False, type=int, default=10)
 parser.add_argument('--train_datapath', required=False, type=str, default="./TCPOSS_data/h5py/train_entry.hdf5")
 parser.add_argument('--test_datapath', required=False, type=str, default="./TCPOSS_data/h5py/test_entry.hdf5")
-parser.add_argument('--save_path', required=False, type=str, default='./model/imgmodel_entry.pth')
+parser.add_argument('--save_path', required=False, type=str, default='./model_used/random_EDL_nokldiv_exp_0.2euc.pth')
 parser.add_argument('--what_we_want', required=False, type=str, default="Default")
 parser.add_argument('--repeat_time', required=False, type=int, default=5)
 parser.add_argument('--is_save', required=False, action="store_true")
@@ -101,7 +101,6 @@ with open ('./record/' + folder_name + '/config.txt', 'w') as f:
     f.write("is_dropout: " + str(is_dropout) + "\n")
     f.write("model_type: " + str(model_type) + "\n")
 
-#%%
 def load_data(datapath, mode='train'):
     f = h5py.File(datapath, 'r')
     labels = f['labels']['labels'][:]
@@ -128,6 +127,9 @@ def load_data(datapath, mode='train'):
     data = ImageDataset(labels, images, transform=transform)
     print(len(data),"# data length")
     return data
+
+# hyperparameter for EUC loss weight
+weight = 0.2
 model_name = {"mobilenet": "mobilenet_v2", "resnet": "resnet50", "densenet": "densenet121"}
 feature_dim = {"mobilenet": 1280, "resnet": 2048, "densenet": 1024}
 start_time = time.time()
@@ -209,7 +211,7 @@ if repeat_time >= 1:
                 EDL_loss = loss_fn(y_hat, y_loss, epoch, n_classes, 100, device)
                 # EUC_loss
                 EUC_loss = euc_loss(y_hat, y_loss, epoch, n_classes, 100, device)
-                loss = EDL_loss + 0.2 * EUC_loss
+                loss = EDL_loss + weight * EUC_loss
                 optimizer.zero_grad()
                 loss.backward()
                 optimizer.step()
@@ -238,7 +240,7 @@ if repeat_time >= 1:
                 EDL_loss = loss_fn(y_hat, y_loss, epoch, n_classes, 100, device)
                 # EUC_loss
                 EUC_loss = euc_loss(y_hat, y_loss, epoch, n_classes, 100, device)
-                loss = EDL_loss + 0.2*EUC_loss
+                loss = EDL_loss + weight *EUC_loss
                 correct = torch.sum(torch.argmax(y_hat, dim=1) == y)
                 total_correct += correct
                 total += len(y)

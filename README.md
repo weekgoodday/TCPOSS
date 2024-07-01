@@ -128,7 +128,14 @@ python Mahalanobis.py
 ```
 
 ### Confidence Method 4: Evidential Deep Learning
-Need retrain, to be finished...
+EDL revises the net architecture, and needs a different training approach, to get EDL model first, run:
+```
+python train_EDL.py --save_path ./model_used/random_EDL_nokldiv_exp_0.2euc.pth
+```
+Revise the EDL model path and data path in EDL.py, then run:
+```
+python EDL.py 
+```
 
 ## TODO List
 ### Release Data
@@ -142,7 +149,7 @@ Need retrain, to be finished...
 - [x] Release codes for plotting Fig.7 T-SNE feature space
 
 ### Release Codes for Confidence Estimation Methods
-- [ ] Release codes for confidence methods (Softmax Confidence, MCDropout, Ensemble, Mahalanobis Distance, Evidential Deep Learning)
+- [x] Release codes for confidence methods (Softmax Confidence, MCDropout, Ensemble, Mahalanobis Distance, Evidential Deep Learning)
 - [ ] Release codes for plotting Fig.8 PR Curve
 - [ ] Release codes for plotting Fig.9 Confidence distributions
 - [ ] Release codes for Fig.10 Calculating KLConf

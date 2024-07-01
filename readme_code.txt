@@ -32,17 +32,23 @@ There are no command line parameters, pay attention to modify the model and trai
 
 5 Confidence Methods:
 
-SoftmaxConf.py uses logits after Softmax layer.
+SoftmaxConf.py : uses logits after Softmax layer.
 Plot remained accuracy (the accuracy of the data with confidence larger than threshold) with the confidence threshold increases. Print the area under this remained acc curve.
 There are no command line parameters, pay attention to modify the model and test set path before running.
 
-MCdropout.py MCdropout calculates total uncertainty, aleatoric uncertainty, epistemic uncertainty in evaluation. Use negative total uncertainty as confidence.
+MCdropout.py : MCdropout calculates total uncertainty, aleatoric uncertainty, epistemic uncertainty in evaluation. Use negative total uncertainty as confidence.
 Plot remained accuracy (the accuracy of the data with confidence larger than threshold) with the confidence threshold increases. Print the area under this remained acc curve.
 There are no command line parameters, pay attention to modify the model and test set path before running.
 
-Ensemble.py Like MCDropout, calculates negative total uncertainty as confidence. Need 5 models trained before.
+Ensemble.py : Like MCDropout, calculates negative total uncertainty as confidence. Need 5 models trained before.
 There are no command line parameters, pay attention to modify the model and test set path before running.
 
-Mahalanobis.py calculates negative Mahalanobis distance as confidence. We use a specific covariance matrix for a specific class, to ensure the reversibility of covariance matrix, we use PCA.
+Mahalanobis.py : calculates negative Mahalanobis distance as confidence. We use a specific covariance matrix for a specific class, to ensure the reversibility of covariance matrix, we use PCA.
 Some experimental results show our implementation performs better than original, although Mahalanobis distance itself performs not so well on our task.
 There are no command line parameters, pay attention to modify the model and test set path before running.
+
+EDL:
+    helpers.py : auxiliary codes for EDL training and testing.
+    losses.py : auxiliary codes for EDL training and testing.
+    train_EDL.py : codes to train EDL model, because EDL needs a different training approach.
+    EDL.py : codes to test EDL model.
